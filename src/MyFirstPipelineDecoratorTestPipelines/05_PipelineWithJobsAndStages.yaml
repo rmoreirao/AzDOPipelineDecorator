@@ -1,0 +1,41 @@
+trigger:
+- master
+
+stages:
+- stage: Build
+  displayName: 'Build stage'
+  jobs:
+  - job: BuildJob1
+    displayName: 'Build job 1'
+    pool:
+      vmImage: 'ubuntu-latest'
+    steps:
+    - script: echo Building the project in job 1...
+      displayName: 'Build script 1'
+
+  - job: BuildJob2
+    displayName: 'Build job 2'
+    pool:
+      vmImage: 'ubuntu-latest'
+    steps:
+    - script: echo Building the project in job 2...
+      displayName: 'Build script 2'
+
+- stage: Test
+  displayName: 'Test stage'
+  jobs:
+  - job: TestJob1
+    displayName: 'Test job 1'
+    pool:
+      vmImage: 'ubuntu-latest'
+    steps:
+    - script: echo Testing the project in job 1...
+      displayName: 'Test script 1'
+
+  - job: TestJob2
+    displayName: 'Test job 2'
+    pool:
+      vmImage: 'ubuntu-latest'
+    steps:
+    - script: echo Testing the project in job 2...
+      displayName: 'Test script 2'

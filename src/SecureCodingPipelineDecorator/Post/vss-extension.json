@@ -1,0 +1,35 @@
+{
+    "manifestVersion": 1,
+    "id": "secure-coding-scanning-post",
+    "name": "Secure Coding Scanning Post",
+    "publisher": "Carnaval DevSecOps",
+    "description": "This extension will add a task to your pipeline to scan your code for vulnerabilities (Post Build)",
+    "version": "1.0.0",
+    "categories": [
+        "Azure Pipelines"
+    ],
+    "targets": [
+        {
+            "id": "Microsoft.VisualStudio.Services"
+        }
+    ],  
+    "contributions": [
+        {
+            "id": "secure-coding-scanning-post-build",
+            "type": "ms.azure-pipelines.pipeline-decorator",
+            "targets": [
+                "ms.azure-pipelines-agent-job.post-job-tasks"
+            ],
+            "properties": {
+                "template": "securecodingpipeline-post.yml"
+            }
+        }
+    ],
+    "files": [
+        {
+            "path": "securecodingpipeline-post.yml",
+            "addressable": true,
+            "contentType": "text/plain"
+        }
+    ]
+}

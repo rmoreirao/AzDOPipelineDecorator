@@ -1,0 +1,35 @@
+{
+    "manifestVersion": 1,
+    "id": "my-first-post-build-decorator",
+    "name": "My First Decorator Post",
+    "publisher": "CarnavalDevSecOps",
+    "description": "This is my first post build decorator",
+    "version": "1.0.0",
+    "categories": [
+        "Azure Pipelines"
+    ],
+    "targets": [
+        {
+            "id": "Microsoft.VisualStudio.Services"
+        }
+    ],  
+    "contributions": [
+        {
+            "id": "id-my-first-post-build-decorator",
+            "type": "ms.azure-pipelines.pipeline-decorator",
+            "targets": [
+                "ms.azure-pipelines-agent-job.post-job-tasks"
+            ],
+            "properties": {
+                "template": "myfirstpipeline-post.yml"
+            }
+        }
+    ],
+    "files": [
+        {
+            "path": "myfirstpipeline-post.yml",
+            "addressable": true,
+            "contentType": "text/plain"
+        }
+    ]
+}

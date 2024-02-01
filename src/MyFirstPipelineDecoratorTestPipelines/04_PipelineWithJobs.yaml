@@ -1,0 +1,19 @@
+trigger:
+- master
+
+jobs:
+- job: Job1
+  displayName: 'Job 1'
+  pool:
+    vmImage: 'ubuntu-latest'
+  steps:
+  - script: echo This is job 1
+    displayName: 'Run script in Job 1'
+
+- job: Job2
+  displayName: 'Job 2'
+  pool:
+    vmImage: 'ubuntu-latest'
+  steps:
+  - script: echo This is job 2
+    displayName: 'Run script in Job 2'
