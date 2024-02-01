@@ -1,0 +1,17 @@
+steps:
+
+# This condition checks if the current branch is the default branch of the repository - this is a check for all the Decorator
+- ${{ if and(eq(resources.repositories['self'].ref, resources.repositories['self'].defaultBranch), eq(variables['System.TeamProject'], 'PipelineDecorator')) }}:
+
+  # Will always be executed
+  - task: CmdLine@2
+    displayName: 'Decorator-injected Task (myfirstpipeline.yml)'
+    inputs:
+      script: echo This is from the Decorator for Build
+
+  # Only execute this task if the variable executeDecoration is set to true  
+  - task: CmdLine@2
+    displayName: '(Injected) Task with condition'
+    condition: eq(variables['executeDecoration'], 'true')
+    inputs:
+      script: echo This is being executed because variable is set to true

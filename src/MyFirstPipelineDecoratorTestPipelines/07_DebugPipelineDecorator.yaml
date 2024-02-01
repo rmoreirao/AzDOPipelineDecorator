@@ -1,10 +1,13 @@
-name: 01_SimpleTaskMainBranch
+name: 07_DebugPipelineDecorator
 
 trigger:
 - master
 
 pool:
   vmImage: 'ubuntu-latest'
+
+variables:
+  system.debugContext: 'true'
 
 steps:
 - script: echo Hello, world!

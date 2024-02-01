@@ -1,5 +1,0 @@
-steps:
-- task: CmdLine@2
-  displayName: 'MyFirstPostPipelineDecorator Decorator-injected Task (myfirstpipeline-post.yml)'
-  inputs:
-    script: echo This is from the Decorator for Build - Post

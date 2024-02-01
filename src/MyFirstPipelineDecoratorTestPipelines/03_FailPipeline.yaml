@@ -1,3 +1,5 @@
+name: 03_FailPipeline
+
 trigger:
 - master
 

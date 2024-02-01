@@ -1,10 +1,13 @@
-name: 01_SimpleTaskMainBranch
+name: 06_SimpleTaskMainBranchWithVariable
 
 trigger:
 - master
 
 pool:
   vmImage: 'ubuntu-latest'
+
+variables:
+  executeDecoration: 'true'
 
 steps:
 - script: echo Hello, world!

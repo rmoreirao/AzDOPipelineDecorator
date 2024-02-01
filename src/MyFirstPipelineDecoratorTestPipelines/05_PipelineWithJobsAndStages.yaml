@@ -1,3 +1,5 @@
+name: 05_PipelineWithJobsAndStages
+
 trigger:
 - master
 
