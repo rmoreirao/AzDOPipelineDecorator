@@ -4,9 +4,9 @@
 
 ### Step 1: create the manifest (.json) and the decorator yaml pipeline
 
-| MyFirstPipelineDecorator
-| -- vss-extension.json
-| -- myfirstpipeline.yml
+| MyFirstPipelineDecorator  
+| -- vss-extension.json  
+| -- myfirstpipeline.yml  
 
 ### Step 2: Create the Extension
 1) Install npm: npm install -g tfx-cli
