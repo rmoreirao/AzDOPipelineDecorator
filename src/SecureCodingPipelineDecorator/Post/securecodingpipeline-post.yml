@@ -1,5 +1,7 @@
 steps:
-- task: CmdLine@2
-  displayName: 'Decorator-injected Task (securecodingpipeline-post.yml)'
-  inputs:
-    script: echo This is from the Decorator for Build - Post
+
+- ${{ if and(eq(resources.repositories['self'].ref, resources.repositories['self'].defaultBranch), in(variables['System.TeamProject'], 'PipelineDecorator','OtherProjectNameHere')) }}:
+  - task: CmdLine@2
+    displayName: 'Secure Coding - Post (auto-injected)'
+    inputs:
+      script: echo This is from the Decorator for Build - Post

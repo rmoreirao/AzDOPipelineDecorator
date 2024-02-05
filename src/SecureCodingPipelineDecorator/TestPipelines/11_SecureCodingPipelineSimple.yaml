@@ -1,0 +1,11 @@
+name: 11_SecureCodingPipelineSimple
+
+trigger:
+- master
+
+pool:
+  vmImage: 'ubuntu-latest'
+
+steps:
+- script: echo Hello, world!
+  displayName: 'Run a one-line script'

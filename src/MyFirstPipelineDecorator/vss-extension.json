@@ -4,7 +4,7 @@
     "name": "My First Decorator",
     "publisher": "CarnavalDevSecOps",
     "description": "This is my first build decorator",
-    "version": "1.0.3",
+    "version": "1.0.4",
     "categories": [
         "Azure Pipelines"
     ],

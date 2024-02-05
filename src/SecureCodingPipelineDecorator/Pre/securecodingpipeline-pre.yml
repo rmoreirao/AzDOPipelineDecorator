@@ -1,0 +1,15 @@
+steps:
+
+- ${{ if and(eq(resources.repositories['self'].ref, resources.repositories['self'].defaultBranch), in(variables['System.TeamProject'], 'PipelineDecorator','OtherProjectNameHere')) }}:
+  - task: CmdLine@2
+    displayName: 'Secure Coding - Pre (auto-injected)'
+    inputs:
+      script: echo This is from the Decorator for Build - Pre
+
+- ${{ if not(containsValue(job.steps.*.task.id, 'B0CE7256-7898-45D3-9CB5-176B752BFEA6')) }}:
+  - task: UseDotNet@2
+    displayName: 'Secure Coding - Install .NET Core SDK (auto-injected)'
+    inputs:
+      version: 8.x
+      performMultiLevelLookup: true
+      includePreviewVersions: true

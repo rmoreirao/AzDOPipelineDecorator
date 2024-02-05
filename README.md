@@ -103,8 +103,13 @@ https://learn.microsoft.com/en-us/azure/devops/extend/develop/add-pipeline-decor
 
 https://learn.microsoft.com/en-us/azure/devops/extend/develop/pipeline-decorator-context?view=azure-devops
 
+https://learn.microsoft.com/en-us/azure/devops/pipelines/process/expressions?view=azure-devops
+
+Sample with Multiline conditions: https://stackoverflow.com/questions/77004197/azure-devops-multiline-yaml-key-for-if-condition
+
 https://github.com/n3wt0n/AzurePipelinesDecoratorSamples/
 
 https://github.com/lgmorand/azure-devops-pipeline-decorators and https://lgmorand.github.io/blog/azure-devops-pipeline-decorator-part1 
 
 https://github.com/JLee794-Sandbox/ADO-Decorators-PoC
+
